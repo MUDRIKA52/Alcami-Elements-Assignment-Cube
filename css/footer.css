@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  
+
+
+.logo-footer {
+    display: block; /* Ensures proper alignment */
+    margin: 0 auto 20px; /* Centers the logo and adds spacing below */
+    max-width: 150px; /* Adjust size as needed */
+    height: auto; /* Keeps aspect ratio */
+    filter: brightness(1.1) contrast(1.2); /* Enhances visibility */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adds hover effect */
+    position: absolute;
+    top: 30px;
+    left: 160px;
+    height: auto;
+}
+
+.logo-footer:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Slight fade effect */
+}
+
+
+
+/* Newsletter Section with Background Image */
+.newsletter-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Background Image with Lazy Loading */
+.newsletter-section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    filter: brightness(80%); /* Image thoda dark ho jayega */
+}
+
+/* When Image Loads */
+.newsletter-section img.loaded {
+    opacity: 1;
+}
+
+/* Overlay for Better Readability */
+.newsletter-overlay {
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Newsletter Text */
+.newsletter-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 0 20px; /* Prevent overflow */
+    font-family:'NewRailAlphabetWhite';
+}
+
+/* Adjust text width for larger screens */
+@media (min-width: 768px) {
+    .newsletter-section h2 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+        z-index: 100;
+    }
+}
+
+.newsletter-section p {
+    font-size: 16px;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    padding: 0 20px;
+    font-family: 'NewRailAlphabetWhite'; 
+      
+}
+
+/* Input Field */
+.newsletter-form {
+    display: flex;
+    flex-direction: column; /* Button neeche laane ke liye */
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+}
+
+.newsletter-form input {
+    width: 90%;
+    max-width: 500px;
+    padding: 12px;
+    border: 2px solid white; /* White border */
+    background: transparent; /* Transparent background */
+    color: white;
+    font-size: 16px;
+    text-align: center; /* Placeholder text center me */
+    outline: none;
+}
+
+/* Placeholder Color */
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Subscribe Button */
+.newsletter-form button {
+    padding: 12px 20px;
+    background: #f1f0ee;
+    border: none;
+    color: #5d5658;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+    width: 200px;
+    font-family: 'NewRailAlphabetWhite'; 
+}
+
+.newsletter-form button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 40px 15px;
+    }
+
+    .newsletter-section h2 {
+        font-size: 28px;
+    }
+
+    .newsletter-section p {
+        font-size: 14px;
+    }
+
+    .newsletter-form input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .newsletter-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+/* Footer Animation on Load */
+.footer {
+    background: #262223;
+    color: #fff;
+    padding-top: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    max-height: 800px;
+    margin-top: 50px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+    font-family: 'NewRailAlphabetWhite'; 
+}
+
+/* Footer Columns */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 200px;
+    margin-top: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-in-out forwards;
+    animation-delay: 0.3s;
+    font-family: 'NewRailAlphabetWhite'; 
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h4{
+    
+    /*  margin-bottom: 5px; */
+     margin-left: 100px;
+     font-size: 50px;
+     color: rgb(255, 251, 251);
+     font-family: 'NewRailAlphabetWhite'; 
+     font-weight: normal;
+     margin-bottom: 5px; /* Added to prevent extra space */
+   }
+   h4:hover
+   {
+    transform: scale(1.05);
+   }
+/* Footer Titles */
+.footer-column h4 {
+    font-size: 18px;
+    color: #f1c40f;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-family: 'NewRailAlphabetWhite'; 
+}
+
+/* Footer Links with Smooth Hover */
+.footer-column a {
+    color: #dedbdb;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+    font-family: 'NewRailAlphabetWhite'; 
+}
+
+.footer-column a:hover {
+    color: #f1c40f;
+    transform: translateX(5px);
+}
+
+/* Social Icons */
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icons img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #f1c40f;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Newsletter Section */
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 700px;
+    align-items: flex-start;
+}
+
+.newsletter-container h4 {
+    font-size: 11px;
+    color: #f1c40f;
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+.newsletter {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.newsletter input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    background: #262223;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.newsletter input:focus {
+    border-color: #f1c40f;
+    transform: scale(1.05);
+}
+.newsletter input:hover {
+    transform: scale(1.05);
+}
+.newsletter button {
+    padding: 10px 20px;
+    background: #f1f1f0;
+    border: none;
+    color: #e67e22;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-family: 'NewRailAlphabetLight';
+}
+
+.newsletter button:hover {
+    background: #e67e22;
+    color: #fff;
+    transform: scale(1.05);
+}
+.newsletter-container p {
+    font-size: 10px;
+    color: #bbb;
+    margin: 0;
+}
+.newsletter-container a{
+    color:#bbb;
+    text-decoration: underline;
+}
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: left;
+    padding: 15px 0;
+    color: #f1c40f;
+    font-size: 12px;
+    margin-left: 100px;
+    margin-bottom: 25px;
+}
+.footer-bottom  p{
+    color:#eaa717
+}
+/* Yellow Bottom Line */
+.yellow-line {
+    width: 100%;
+    height: 4px;
+    background: #f1c40f;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-column {
+        align-items: center;
+        min-width: 100%;
+    }
+
+    .footer-column h4 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+.footer{
+    font-family: 'NewRailAlphabetWhite'; 
+}

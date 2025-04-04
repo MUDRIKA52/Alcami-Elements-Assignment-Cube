@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.comparison-section{
+    background-color: white;
+    padding-top: 100px;
+}
+.comparison-section h1{
+    font-family: 'NewRailAlphabet-White';
+    text-align: center;
+    padding-left: 460px;
+    padding-right: 460px;
+    font-size: 30px;
+
+}
+/* Table Container */
+.table-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Table */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures better scrolling */
+}
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Prevents content from breaking */
+    font-family: 'NewRailAlphabet-White';
+}
+th {
+    background-color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'NewRailAlphabet-White';
+}
+.selected-column {
+    background-color: #f5efe2;
+}
+
+/* Product Images */
+.product-img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Icons */
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    line-height: 18px;
+    font-weight: light;
+    background-color: white;
+}
+.selected-column .icon {
+    background-color: rgb(101, 151, 101);
+    color: rgb(0, 0, 0);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background: linear-gradient(90deg, #a2862a, #f7e58b);
+    color: #000;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: fit-content;
+    margin: 40px auto;
+    font-family: 'NewRailAlphabet-White';
+}
+.checkout-btn:hover {
+    background: linear-gradient(90deg, #f7e58b, #d4af37);
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    table {
+        width: 95%;
+    }
+    th, td {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .product-img {
+        width: 40px;
+        height: 40px;
+    }
+    .checkout-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 13px;
+    }
+    .product-img {
+        width: 35px;
+        height: 35px;
+    }
+    .checkout-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-container {
+        padding: 5px;
+    }
+    table {
+        min-width: 100%;
+        font-size: 12px;
+    }
+    th, td {
+        padding: 8px;
+    }
+    .product-img {
+        width: 30px;
+        height: 30px;
+    }
+    .checkout-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,557 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.buy{
+    display: flex;
+    flex-direction: row;
+    margin: 60px;
+    gap: 200px;
+}
+/* Responsive Image Slider with Animations */
+.slider-container {
+   /*  margin: 80px auto; */
+    position: relative;
+    width: 90%; /* Responsive width */
+    max-width: 700px; /* Limit width for larger screens */
+}
+
+/* Main Image Styling */
+.main-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in */
+}
+
+/* Thumbnail Section */
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Responsive grid */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+/* Thumbnail Styling */
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+}
+.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.thumbnail.active {
+    opacity: 1;
+    border: 2px solid black;
+    transform: scale(1.2); /* Slightly enlarge the selected thumbnail */
+}
+
+/* Navigation Arrows */
+.arrows {
+    position: absolute;
+  /*   top: 50%; */
+  margin-top: 40px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    background: white;
+    padding: 8px 12px;
+    border: 1px solid black;
+    border-radius: 50%;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+.arrows:hover {
+    background: black;
+    color: white;
+}
+
+/* Left & Right Arrow Position */
+.left-arrow { left: -30px; }
+.right-arrow { right: -30px; }
+
+/* Indicators for Active Slide */
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.indicator {
+    width: 8px;
+    height: 8px;
+    margin: 5px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.indicator.active {
+    background: black;
+    transform: scale(1.3);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    .main-image {
+        height: 300px; /* Adjusted for smaller screens */
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 50px;
+    }
+
+    .arrows {
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+
+    .left-arrow { left: -15px; }
+    .right-arrow { right: -15px; }
+}
+
+@media (max-width: 480px) {
+    .main-image {
+        height: 250px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 40px;
+    }
+
+    .arrows {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+}
+/* right section */
+/* flavours */
+
+/* flavours */
+
+.container1 {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+.heading {
+    font-size: 24px;
+    color: #333;
+    font-family: 'NewRailAlphabet-Light';
+}
+.rating1 {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
+.stars {
+    color: #FFA500;
+    margin-right: 5px;
+}
+.description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-family: 'NewRailAlphabet-White';
+}
+.flavor-section {
+    margin-top: 20px;
+}
+.flavor-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'NewRailAlphabet-White';
+}
+.flavors {
+    display: flex;
+    gap: 20px;
+  
+}
+
+.flavor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f0eaea;
+    padding: 8px;
+    border-radius: 5px;
+    padding-bottom: 0;
+    
+}
+.flavor input {
+    margin-bottom: 5px;
+}
+.flavor-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: grey;
+    
+}
+.flavor-label:hover {
+    color: #a2862a;
+  }
+  
+.flavor img {
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.best-seller {
+    font-size: 8px;
+    color: white;
+    background: linear-gradient(90deg, #a2862a, #f7e58b);
+    padding: 2px 5px;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    text-align: right;
+}
+/* subscription ection and addd to cart */
+.subscription-container {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+.option {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.option.active {
+    border-color: #d4a24f;
+}
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+  font-family: 'NewRailAlphabet-White';
+}
+.most-popular {
+    background: linear-gradient(90deg, #a2862a, #f7e58b);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:  5px ;
+}
+.include p{
+    font-weight: bold;
+    color: black;
+    font-family: 'NewRailAlphabet-Bold';
+}
+.details {
+    display: none;
+    padding: 10px 0;
+}
+.details img {
+    width: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+.included-items li {
+list-style: none;
+position: relative;
+padding: 4px;
+padding-left: 20px;
+font-family: 'NewRailAlphabet-White';
+font-size: 12px;
+
+}
+
+.included-items li::before {
+content: "✔";
+color: green;
+font-weight: bold;
+position: absolute;
+left: 0;
+}
+.free{
+display: flex;
+flex-direction: row;
+}
+.one_time{
+display: flex;
+flex-direction: column;
+padding: 8px;
+
+}
+.golden{
+    color: #d4a24f;
+}
+.free{
+    margin-top: 8px;
+}
+.every30{
+display: flex;
+flex-direction: column;
+padding: 15px;
+}
+.total_included{
+display: flex;
+flex-direction: row;
+
+
+}
+.add-to-cart {
+display: inline;
+margin-top: 20px;
+padding: 10px 15px;
+background: rgb(36, 133, 48);
+color: white;
+text-decoration: none;
+text-align: center;
+border-radius: 25px;
+cursor: pointer;
+border: none;
+width: 100%;
+}
+.add-to-cart::after {
+content: " →";  /* Adds an arrow after the text */
+font-size: 16px;
+transition: transform 0.3s ease;
+}
+
+.add-to-cart:hover::after {
+transform: translateX(5px);  /* Moves arrow slightly on hover */
+}
+.cart-sidebar {
+position: fixed;
+top: 0;
+right: -400px; /* Initially hidden */
+width: 350px;
+height: 100vh;
+background: white;
+box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+padding: 20px;
+transition: right 0.3s ease-in-out;
+}
+
+.cart-sidebar.active {
+right: 0; /* Show cart when active */
+}
+
+
+.cart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 18px;
+font-weight: bold;
+}
+
+.close-btn {
+cursor: pointer;
+font-size: 24px;
+}
+
+.cart-content {
+margin-top: 20px;
+}
+
+.total-amount {
+font-size: 18px;
+font-weight: bold;
+margin-top: 10px;
+}
+
+.order-now {
+margin-top: 20px;
+padding: 10px;
+width: 100%;
+background: #ff6600;
+color: white;
+border: none;
+font-size: 16px;
+cursor: pointer;
+border-radius: 5px;
+}
+.include p{
+font-weight: bold;
+}
+.line {
+width: 100%;
+height: 1px;
+background-color: #ccc; /* Adjust color to match your design */
+margin: 10px 0;
+}
+
+/* responsive */
+
+
+@media (max-width: 1024px) {
+    .buy {
+        flex-direction: column;
+        gap: 50px;
+        margin: 30px;
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+}
+
+.main-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 100%;
+        margin: 50px auto;
+    }
+    
+    .main-image {
+        height: 300px;
+    }
+    
+    .thumbnails {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 50px;
+    }
+    
+    .arrows {
+        font-size: 20px;
+        padding: 6px 10px;
+    }
+    
+    .left-arrow { left: -15px; }
+    .right-arrow { right: -15px; }
+}
+
+@media (max-width: 480px) {
+    .main-image {
+        height: 250px;
+    }
+    
+    .thumbnail {
+        width: 50px;
+        height: 40px;
+    }
+    
+    .arrows {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .flavors {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+.subscription-container {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.free, .total_included {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.add-to-cart {
+    width: 100%;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .cart-sidebar {
+        width: 280px;
+    }
+}
+.one_time, .every30{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}

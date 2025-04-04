@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* General Styles */
+.guarantee-section, .as-seen-in {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* OUR GUARANTEE SECTION */
+.guarantee-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #ecebeb, #fdfdfd);
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); */}
+   
+
+.guarantee-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guarantee-item img {
+    width: 38px;
+    height: 38px;
+}
+
+.guarantee-item strong {
+    font-size: 16px;
+    color: #333;
+}
+.guarantee-item strong{
+    font-family: 'NewRailAlphabet-White'; 
+    margin-bottom: 600px;
+}
+.guarantee-item p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+    font-family: 'NewRailAlphabet-White'; 
+    margin-top: 5px;
+}
+
+/* Highlight "OUR GUARANTEE" */
+.highlight {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d4a017;
+}
+
+/* AS SEEN IN SECTION */
+.as-seen-in {
+    /* text-align: center; */
+    margin-top: 40px;
+}
+
+.as-seen-in h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+     margin-top: 10px; 
+    margin-right: 160px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.logo-container img {
+    max-height: 32px;
+    opacity: 0.8;
+}
+
+.logo-container img:hover {
+    opacity: 1;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .guarantee-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .guarantee-item {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        gap: 20px;
+       
+    }
+
+    .logo-container img {
+        max-height: 28px;
+        
+    }
+}
+
+/* gmo certified */
+.guarantee-1-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.guarantee-1-item img {
+    width: 32px;
+    height: 32px;
+}
+
+
+
+.guarantee-1-item p {
+    font-size: 14px;
+    color: #100f0f;
+    margin: 0;
+}
+.logo-1-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.logo-1-container img {
+    max-height: 32px;
+    opacity: 0.8;
+}
+
+/* When Image Loads */
+.logo-1-container img.loaded {
+    opacity: 1;
+}
+.logo-1-container img:hover {
+    opacity: 1;
+}
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .guarantee-1-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .guarantee-1-item {
+        flex-direction: column;
+    }
+
+    .logo-1-container {
+        gap: 20px;
+    }
+
+    .logo-1-container img {
+        max-height: 28px;
+    }
+}

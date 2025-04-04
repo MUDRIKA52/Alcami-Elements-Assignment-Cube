@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Reviews Section */
+.reviews {
+    padding: 30px 10px;
+    position: relative;
+    background: #F7F5F0;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.reviews-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 15px;
+    margin-left: 160px;
+    font-family: 'NewRailAlphabet-White';
+}
+.reviews-header h2{
+    font-family: 'NewRailAlphabet-White';   
+}
+
+.review_heading_para{
+    margin-left: 160px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.next-btn, .prev-btn {
+    background-color: #faf3f3;
+    color: rgb(3, 3, 3);
+    border: 2 px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-family: 'NewRailAlphabet-White';
+}
+.next-btn, .prev-btn:hover {
+    background-color: #090909;
+    color: rgb(243, 236, 236);
+    font-family: 'NewRailAlphabet-White';
+}
+.slider {
+    
+    max-width: 1000px;
+    margin: 0 160px;
+    width: 100%;
+    
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.review {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: left;
+    flex: 0 0 calc(33.33% - 20px);
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.reviewer img {
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.review p:first-child {
+    color: green;
+}
+
+/* Dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #F7F5F0;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid black; /* Black border added */
+}
+
+.dot.active {
+    background-color: black;
+}
+
+/* FAQ Section */
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    font-family: 'NewRailAlphabet-White';
+
+}
+
+.faq-left {
+    max-width: 40%;
+}
+
+.faq-left h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.faq-left p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.faq-btn {
+    background: linear-gradient(90deg, #bd9347, #eec56c);
+    border: none;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.faq-right {
+    width: 55%;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #666;
+    /* font-weight: bold; */
+    cursor: pointer;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.faq-answer {
+    display: none;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.faq-question span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.see-all-faqs {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'NewRailAlphabet-White';
+}
+
+/* Animations and Transitions */
+.dot {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.3);
+}
+
+.next-btn, .prev-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.next-btn:hover, .prev-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Slide-in animation for reviews */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .reviews-header, .review_heading_para {
+        margin-left: 50px;
+    }
+
+    .slider {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .review {
+        flex: 0 0 calc(50% - 20px); /* Show 2 reviews per row */
+    }
+
+    .faq-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .faq-left, .faq-right {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-header, .review_heading_para {
+        margin-left: 20px;
+    }
+
+    .review {
+        flex: 0 0 100%; /* Show 1 review per row */
+    }
+
+    .faq-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-btn {
+        width: 100%;
+    }
+}
+
+/* Center "See all FAQs" button */
+.see-all-faqs {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+}

@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.founders-section {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8f9fa;
+    align-items: center;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Video Hover Animation */
+.video-container:hover {
+    transform: scale(1.03);
+}
+
+/* Video */
+.video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 193, 7, 0.9);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Play Button Hover Effect */
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: rgba(255, 193, 7, 1);
+}
+
+/* Play Button Icon */
+.play-button span {
+    font-size: 24px;
+    color: white;
+}
+
+/* Content Section */
+.founders-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 1000px;
+}
+
+.content {
+    width: 350px;
+    text-align: left;
+    font-family: 'NewRailAlphabet-White';
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 24px;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'NewRailAlphabet-White';
+    font-weight: light;
+}
+
+.founders-content p {
+    color: #4a4a4a;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 20px;
+   text-align: left;
+    padding-right: 50px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+
+/* About Button */
+.about-btn {
+    background: linear-gradient(90deg, #a2862a, #f7e58b);
+    color: #000;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    font-family: 'NewRailAlphabet-White';
+}
+
+/* Button Hover */
+.about-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframe Animation for Text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== Responsive Design =================== */
+
+/* Tablet View (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .founders-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .video-container {
+        width: 95%;
+    }
+    .content {
+        width: 90%;
+    }
+    .founders-content p {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* Mobile View (Below 768px) */
+@media screen and (max-width: 768px) {
+    .founders-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .video-container {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .founders-content p {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .about-btn {
+        width: 80%;
+        justify-content: center;
+    }
+}
+

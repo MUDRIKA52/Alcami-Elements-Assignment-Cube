@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*  Top Bar */
+.top-bar {
+    background-color: #2F2926;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family:'NewRailAlphabet-White' ;
+}
+
+/*  Navbar */
+.navbar {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 10px 30px;
+    
+    position: relative;
+}
+
+/* Hamburger Menu (Left Side of Logo) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(0, 0, 0); /* Visible on dark background */
+    /* background-color: #C39B24; */ /* Golden touch */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* 🏷 Logo */
+/* Logo Container */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Image */
+.logo img {
+    width: 150px;  /* Adjust width as needed */
+    height: auto;   /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure responsiveness */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.9;
+}
+
+
+/*  Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 20px;
+    transition: opacity 0.3s ease-in-out;
+    flex-grow: 1;  /* Allows links to take available space */
+    justify-content: flex-start; /* Moves links to the left */
+    margin: auto;
+    margin-left: 280px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:   black;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+    font-family:  'NewRailAlphabet-White';
+}
+
+.nav-links a:hover {
+    color: #C39B24;
+}
+
+/*  Search & Try Alcami */
+.right-nav {
+    display: flex;
+    align-items: right;
+    gap: 15px;
+}
+
+/*  Search Button */
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.search-btn:hover {
+    transform: scale(1.1);
+}
+/* Ensure the search icon image fits well */
+.search-btn img {
+    width: 24px;  /* Set the width of the icon */
+    height: 24px;  /* Set the height of the icon */
+    object-fit: contain;  /* Preserve aspect ratio */
+}
+
+/* Try Alcami Button */
+.try-btn {
+    background: linear-gradient(90deg, #C39B24, #FFD700);
+    color: rgb(16, 15, 15);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out;
+    font-family: 'NewRailAlphabet-Light';
+}
+
+.try-btn:hover {
+    background: linear-gradient(90deg, #FFD700, #C39B24);
+}
+
+/* Search Bar */
+.search-container {
+    display: none;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: #F0F0F0;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*  Responsive for Tablets & Mobile */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    /*  Hamburger Menu (Visible & Left Side of Logo) */
+    .hamburger {
+        display: block;
+        order: -1; /* Moves hamburger to the left */
+    }
+
+    /* 🏷 Logo Centered */
+    .logo {
+        text-align: left;
+        order: 0;
+        margin:5px;
+    }
+
+    /*  Sidebar Menu */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #2F2926;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+        margin-left: 0;
+      
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 15px;
+        display: block;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    /*  Overlay for outside clicks */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       /*  background: rgba(0, 0, 0, 0.5); */
+        display: none;
+    }
+
+    .overlay.show {
+        display: block;
+       
+    
+    }
+
+    /*  Search Bar Adjustment */
+    .search-container {
+        display: flex;
+        /* order: 2; */
+    }
+
+    .search-bar {
+        width: 250px;
+    }
+
+    /*  Keep Search & Try Alcami Side by Side */
+    .right-nav {
+        gap: 10px;
+    }
+}
+
+/* Small Screens */
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+}

@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #ecebeb, #fdfdfd);
+    color: #333;
+    text-align: left;
+    position: relative;
+    border: none;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.cquality{
+    display: flex;
+    flex-direction: column;
+}
+.quality{
+    display: flex;
+    flex-direction: row;
+    font-family: 'NewRailAlphabet-White';
+    font-weight: normal;
+    gap: 70px;
+}
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #6d6d6d;
+    background: linear-gradient(to bottom, #fdfdfd, #ebebeb);
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.inside_rating {
+    font-size: 14px;
+    color: #6d6d6d;
+    background: white;
+    padding: 8px 15px;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.achieve {
+    font-size: 40px;
+    margin: 10px 0;
+    margin-bottom: 0;
+    font-family: 'NewRailAlphabet-White';
+    font-weight: light;
+}
+
+.hero-image {
+    flex: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 0;
+}
+
+
+
+.h_img1 img.loaded {
+    opacity: 1;
+}
+
+.h_img1 {
+    width: 600px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 0;
+}
+
+.h_img2 {
+    width: 800px;
+    height: 500px;
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Shop Now Button */
+.shop-now-btn {
+    background: linear-gradient(90deg, #d4af37, #f7e58b);
+    color: #000;
+    font-family: 'NewRailAlphabet-White';
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    display: inline;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.shop-now-btn:hover {
+    background: linear-gradient(90deg, #f7e58b, #d4af37);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 70px;
+    font-family: 'NewRailAlphabet-White';
+    font-weight: bold;
+    color: #020202;
+    margin-top: 50px;
+    margin-left: 460px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    display: inline-block;
+    width: 600px;
+    padding: 2px 20px;
+    margin-bottom: 60px;
+}
+
+/* Ingredients Section */
+.ingredients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: none;
+    height: 800px;
+}
+
+.ingredient-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Lazy loading for ingredient images */
+.ingredient-image img.lazy-img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ingredient-image img.lazy-img.loaded {
+    opacity: 1;
+}
+
+.ingredient-image img:hover {
+    transform: scale(1.05);
+}
+
+.ingredient-content {
+    max-width: 500px;
+}
+
+/* Style for View Full Ingredients Button */
+.view-ingredients-btn {
+    background:  #dcb22b;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'NewRailAlphabet-White';
+    gap: 35px;
+    text-decoration: none;
+}
+
+.view-ingredients-btn:hover {
+    
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+    
+.ingredient-content h2 {
+    color: #D4A017;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'NewRailAlphabet-White';
+   
+}
+.ingredient-content h3{
+    font-family: 'NewRailAlphabet-White';
+    font-size: 28px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px ;
+    font-family: 'NewRailAlphabet-White';
+
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+    .achieve {
+        font-size: 28px;
+    }
+    .divider {
+        font-size: 50px;
+        width: 80%;
+        margin: 20px auto;
+    }
+    .ingredient-content h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Responsive Hero Section */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-content {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .hero-image {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .h_img1, .h_img2 {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Responsive Quality Section */
+@media screen and (max-width: 768px) {
+    .quality {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* Responsive Shop Now Button */
+@media screen and (max-width: 768px) {
+    .shop-now-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: auto;
+    }
+}
+
+/* Responsive Ingredients Section */
+@media screen and (max-width: 1024px) {
+    .ingredients {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+    .ingredient-content {
+        max-width: 90%;
+    }
+    .ingredient-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive View Ingredients Button */
+@media screen and (max-width: 768px) {
+    .view-ingredients-btn {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 8px 16px;
+    }
+}

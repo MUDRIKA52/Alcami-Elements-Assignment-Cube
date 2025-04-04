@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'NewRailAlphabet-Bold';
+    src: url('../assets/fonts/NewRailAlphabet-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-Light';
+    src: url('../assets/fonts/NewRailAlphabet-Light (1).otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewRailAlphabet-White';
+    src: url('../assets/fonts/NewRailAlphabet-White.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'NewRailAlphabetBold','NewRailAlphabetWhite';
+    margin: 0;
+    padding: 0;
+   /*  background: linear-gradient(to bottom, #d3d3d3 0%, #eaeaea 20%, #ffffff 35%, #ffffff 100%); */
+   background: linear-gradient(to bottom, /* #d3d3d3 20% */ #eaeaea 20%, #ffffff 35%, #ffffff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+button{
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}
