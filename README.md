@@ -82,6 +82,8 @@ Tested and fully functional on:
 - `js/script.js` – All interactive functionalities
 - `assets/fonts/` – Custom fonts used in the design
 - `assets/images/` – Images used in the design
+- `assets/icons/` – Icons used in the design
+- `assets/videos/` – Videos used in the design
 
 ---
 
@@ -97,7 +99,7 @@ Tested and fully functional on:
 
 
 
-**Live Demo**: _[Your deployment link here]_
+**Live Demo**: (https://mudrika52.github.io/Alcami-Elements-Assignment-Cube/)
 
 ---
 
@@ -105,6 +107,6 @@ Tested and fully functional on:
 
 **Mudrika Tiwari**  
 Frontend Developer  
-📧 mudrikatiwari552@gmail.com
+📧 mudrikatiwari55@gmail.com
 
 ---
